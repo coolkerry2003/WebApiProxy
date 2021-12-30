@@ -11,6 +11,7 @@ namespace Proxy.Controllers
     public class ProxyController : ApiController
     {
         string baseUrl = "http://127.0.0.1:8080";
+        [Route("proxy/{*url}")]
         public async Task<HttpResponseMessage> Get(string url)
         {
             using (var httpClient = new HttpClient())

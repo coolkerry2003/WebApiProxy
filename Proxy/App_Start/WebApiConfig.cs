@@ -19,12 +19,6 @@ namespace Proxy
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
-
-            config.Routes.MapHttpRoute(
-                name: "Proxy",
-                routeTemplate: "Proxy/{*url}",
-                defaults: new { controller = "Proxy" }
-            );
         }
     }
 }
